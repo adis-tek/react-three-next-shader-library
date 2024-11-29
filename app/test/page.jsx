@@ -2,6 +2,7 @@
 
 import { Canvas } from '@react-three/fiber'
 import { useFrame } from '@react-three/fiber'
+import Cube from '../../src/components/canvas/cube'
 
 export default function test() {
   return (
@@ -39,10 +40,7 @@ export default function test() {
       >
         <ambientLight intensity={1.5} />
         <directionalLight position={[0, 0, 5]} color='white' />
-        <mesh postion={[9, 0, 0]} rotation-x={Math.PI * 1} scale={[1.5, 1.5, 1.5]}>
-          <boxGeometry args={[2, 2, 2]} />
-          <meshPhongMaterial color='light-orange' />
-        </mesh>
+        <Cube />
       </Canvas>
     </div>
   )
