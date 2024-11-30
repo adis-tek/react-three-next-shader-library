@@ -28,7 +28,37 @@ export default function test() {
         </group>
       </Canvas> */}
       <Canvas
-        style={{ height: '100vh' }}
+        style={{ height: `${100 / 3}vh` }}
+        // camera={{
+        //   position: [0, 0, 5],
+        //   fov: 75,
+        //   aspect: window.innerWidth / window.innerHeight,
+        //   near: 0.1,
+        //   far: 1000,
+        // }}
+        camera={{ position: [9, 1.5, 3] }}
+      >
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[0, 0, 5]} color='white' />
+        <Cube />
+      </Canvas>
+      <Canvas
+        style={{ height: `${100 / 3}vh` }}
+        // camera={{
+        //   position: [0, 0, 5],
+        //   fov: 75,
+        //   aspect: window.innerWidth / window.innerHeight,
+        //   near: 0.1,
+        //   far: 1000,
+        // }}
+        camera={{ position: [9, 1.5, 3] }}
+      >
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[0, 0, 5]} color='white' />
+        <Cube />
+      </Canvas>
+      <Canvas
+        style={{ height: `${100 / 3}vh` }}
         // camera={{
         //   position: [0, 0, 5],
         //   fov: 75,

@@ -11,9 +11,11 @@ export default function Cube() {
     cubeRef.current.rotation.y += delta
   })
   return (
-    <mesh ref={cubeRef} postion={[9, 0, 0]} rotation-x={Math.PI * 1} scale={[1.5, 1.5, 1.5]}>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshPhongMaterial color='light-orange' />
-    </mesh>
+    <>
+      <mesh ref={cubeRef} postion={[0, 0, 0]} rotation-x={Math.PI * 1} scale={[1.5, 1.5, 1.5]}>
+        <boxGeometry args={[2, 2, 2]} />
+        <meshPhongMaterial color='light-orange' />
+      </mesh>
+    </>
   )
 }
