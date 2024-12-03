@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import { useMemo, useRef, useState } from 'react'
 import { Html, MeshReflectorMaterial, TransformControls, Text, OrbitControls, PivotControls } from '@react-three/drei'
 import { useThree, extend } from '@react-three/fiber'
+import { useControls } from 'leva'
 
 export default function Cube() {
   const { camera, gl } = useThree()
@@ -13,6 +14,11 @@ export default function Cube() {
     const t = state.clock.getElapsedTime()
     cubeRef.current.rotation.y += delta
   })
+
+  const controls = useControls({
+    position: -2,
+  })
+
   return (
     <>
       <OrbitControls />
