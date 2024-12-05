@@ -54,7 +54,7 @@ export default function test() {
 
         <Cube />
       </Canvas>
-      <Canvas
+      {/* <Canvas
         style={{ height: `${100 / 3}vh` }}
         // camera={{
         //   position: [0, 0, 5],
@@ -83,7 +83,7 @@ export default function test() {
         <ambientLight intensity={1.5} />
         <directionalLight position={[0, 0, 5]} color='white' />
         <Cube />
-      </Canvas>
+      </Canvas> */}
     </div>
   )
 }
