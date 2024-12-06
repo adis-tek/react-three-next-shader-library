@@ -6,7 +6,7 @@ import Cube from '../../src/components/canvas/cube'
 
 export default function test() {
   const created = ({ gl }) => {
-    console.log('created', gl)
+    // console.log('created', gl)
     // gl.setClearColor('#ff0000', 1)
   }
   return (
