@@ -49,8 +49,6 @@ export default function test() {
         onCreated={created}
       >
         <color args={['beige']} attach='background' />
-        <ambientLight intensity={1.5} />
-        <directionalLight position={[0, 0, 5]} color='white' />
 
         <Cube />
       </Canvas>
