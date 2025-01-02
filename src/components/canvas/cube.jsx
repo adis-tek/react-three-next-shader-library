@@ -26,11 +26,11 @@ export default function Cube() {
     cubeRef.current.rotation.y += delta
   })
 
-  leva
+  // leva
 
-  const controls = useControls({
-    position: -2,
-  })
+  // const controls = useControls({
+  //   position: -2,
+  // })
 
   return (
     <>
