@@ -11,6 +11,7 @@ import {
   OrbitControls,
   useHelper,
   PivotControls,
+  SoftShadows,
 } from '@react-three/drei'
 import { useThree, extend } from '@react-three/fiber'
 import { useControls } from 'leva'
@@ -34,8 +35,19 @@ export default function Cube() {
 
   return (
     <>
+      <SoftShadows frustum={3.75} size={50} near={9.5} samples={17} rings={11} />
       <OrbitControls />
-      <directionalLight castShadow ref={directionalLight} position={[0, 0, 5]} color='white' />
+      <directionalLight
+        castShadow
+        ref={directionalLight}
+        position={[0, 0, 5]}
+        color='white'
+        shadow-mapSize={[1024, 1024]}
+        shadow-camera-left={2}
+        shadow-camera-right={2}
+        shadow-camera-top={2}
+        shadow-camera-bottom={2}
+      />
       <ambientLight intensity={1.5} />
       <TransformControls object={cubeRef} />
       {/* <mesh ref={cubeRef} postion={[0, 0, 0]} rotation-x={Math.PI * 1} scale={[1.5, 1.5, 1.5]}>
